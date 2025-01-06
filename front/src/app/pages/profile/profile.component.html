@@ -1,0 +1,59 @@
+<div>
+    <app-mini-nav [title]="'PROFILE' | translate" [image]="'home/single-user-edit-pen.png'" [action]="'/edit-profile'" [backAction]="'/settings'"></app-mini-nav>
+    <div class="name">
+        <div class="image-profile">
+            <img [src]="userData.image">
+        </div>
+        <div>
+            <h4>{{userData.name}}</h4>
+            <p>{{'WELCOME' | translate}}</p>
+        </div>
+    </div>
+    <div>
+        <div class="button-direction" routerLink="/profile">
+            <div>
+                <img src="../../../assets/images/profile/User,Profile.png">
+                <h6>{{'PERSONALINFO' | translate}}</h6>
+            </div>
+            <img src="../../../assets/images/home/arrow-right.png">
+        </div>
+        <div class="button-direction" routerLink="/profile">
+            <div>
+                <img src="../../../assets/images/profile/credit-cards.png">
+                <h6>{{'PAYMENT' | translate}}</h6>
+            </div>
+            <img src="../../../assets/images/home/arrow-right.png">
+        </div>
+        <div class="button-direction" routerLink="/all-cards">
+            <div>
+                <img src="../../../assets/images/profile/Credit card, Edit.png">
+                <h6>{{'BANKS' | translate}}</h6>
+            </div>
+            <img src="../../../assets/images/home/arrow-right.png">
+        </div>
+        <div class="button-direction" routerLink="/notifications">
+            <div>
+                <img src="../../../assets/images/profile/Bell, Notification.png">
+                <h6>{{'NOTIF' | translate}}</h6>
+            </div>
+            <img *ngIf="notifications == 0" src="../../../assets/images/home/arrow-right.png">
+            <div *ngIf="notifications != 0" class="notification">
+                <p>{{notifications}}</p>
+            </div>
+        </div>
+        <div class="button-direction" routerLink="/profile">
+            <div>
+                <img src="../../../assets/images/profile/message.png">
+                <h6>{{'MESSAGE' | translate}}</h6>
+            </div>
+            <img src="../../../assets/images/home/arrow-right.png">
+        </div>
+        <div class="button-direction" routerLink="/profile">
+            <div>
+                <img src="../../../assets/images/profile/Pin, Location.png">
+                <h6>{{'ADDRESS' | translate}}</h6>
+            </div>
+            <img src="../../../assets/images/home/arrow-right.png">
+        </div>
+    </div>
+</div>

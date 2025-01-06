@@ -1,0 +1,57 @@
+<app-mini-nav [title]="'ADD-NEW-CARD' | translate" [image]="'no'" [action]="'no'"[backAction]="'my-cards'" ></app-mini-nav>
+<div class="cards-info">
+    <app-card-mastercard [card]="card"></app-card-mastercard>
+    <img class="elipse" src="../../../assets/images/home/elipse.png">
+</div>
+<form [formGroup]="addForm">
+    <label for="typeCard">Card Type:</label>
+    <select id="typeCard" formControlName="typeCard" (change)="onTypeCardChange()">
+      <option value="Debit">Debit</option>
+      <option value="Credit">Credit</option>
+    </select>
+  
+    <!-- Select pentru Credit -->
+    <div *ngIf="isCredit">
+      <label for="type">Credit Type:</label>
+      <select id="type" formControlName="type">
+        <option value="Platinum">Platinum</option>
+        <option value="Silver">Silver</option>
+        <option value="Gold">Gold</option>
+      </select>
+    </div>
+
+    <div class="group">
+        <label for="name">{{'CARDHOLDER-NAME' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../../assets/images/profile/User,Profile.png">
+            <input type="text" formControlName="name" id="name" [placeholder]="'ENTER-NAME' | translate">
+        </div>
+    </div>
+    <div class="date-cvv">
+        <div class="group">
+            <label for="text">{{'DATE' | translate}}</label>
+            <div class="input-group-data">
+                <input type="date" formControlName="expiryDate" id="text" [placeholder]="'DATE-HOLDER' | translate" maxlength="10">
+            </div>
+        </div>
+        <div class="group">
+            <label for="phone">{{'CVV' | translate}}</label>
+            <div class="input-group-data">
+                <input type="text" formControlName="cvv" id="phone" [placeholder]="'ENTER-CVV' | translate" maxlength="4">
+            </div>
+        </div>
+    </div>
+
+    <div class="group">
+        <label for="phone">{{'CARD' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../assets/images/profile/credit-cards.png">
+            <input type="text" formControlName="card" id="card" [placeholder]="'ENTER-CARD' | translate" maxlength="16">
+            <img src="../../../assets/images/mastercard.png" *ngIf="card.type == 'mastercard'">
+            <img src="../../../assets/images/visa-logo.png" *ngIf="card.type == 'visa'" style="background-color: black;height: 15px;" >
+        </div>
+    </div>
+    <div class="button-add">
+        <app-button-custom (click)="addCard()" [text]="'ADD' | translate" [invalid]="addForm.invalid"></app-button-custom>
+    </div>
+</form>

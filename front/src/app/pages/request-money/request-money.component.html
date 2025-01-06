@@ -1,0 +1,41 @@
+<app-mini-nav [title]="'REQUEST-MONEY' | translate" [image]="'no'" [action]="'no'" [backAction]="'/home'"></app-mini-nav>
+
+<form [formGroup]="editForm">
+    <div class="group">
+        <label for="name">{{'FULLNAME' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../../assets/images/profile/User,Profile.png">
+            <input type="text" formControlName="name" id="name" [placeholder]="'FULLNAME-HOLDER' | translate">
+        </div>
+    </div>
+    <div class="group">
+        <label for="email">{{'EMAIL' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../assets/images/icons/email-mail-letter.png">
+            <input type="email" formControlName="email" id="email" [placeholder]="'ENTER-EMAIL' | translate">
+        </div>
+    </div>
+    <div class="group">
+        <label for="phone">{{'PHONE' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../assets/images/icons/Phone, Call.png">
+            <input type="text" formControlName="phone" id="phone" [placeholder]="'ENTER-PHONE' | translate">
+        </div>
+    </div>
+    <div class="group">
+        <label for="dueDate">{{'DATE' | translate}}</label>
+        <div class="input-group-data">
+            <input type="date" formControlName="dueDate" id="dueDate" [placeholder]="'ENTER-DATE' | translate">
+        </div>
+    </div>
+    <div class="price-container">
+        <div class="currency-amount">
+            <p>{{'AMOUNT' | translate}}</p> 
+            <span>{{'CURRENCY' | translate}}</span>    
+        </div>
+        <h4 class="amount"><span>USD</span><input type="number" [placeholder]="'ENTER-AMOUNT' | translate" formControlName="amount"></h4>
+    </div>
+</form>
+<div class="fix-button">
+    <app-button-custom [text]="'REQUEST-MONEY' | translate" [invalid]="editForm.invalid" (click)="addRequest()"></app-button-custom>
+</div>

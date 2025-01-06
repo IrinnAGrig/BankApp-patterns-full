@@ -1,0 +1,57 @@
+<div class="title">
+    <div class="search" (click)="goHome()">
+        <img [src]="'../../../../assets/images/back-sign.png'">
+    </div>
+    <h3>{{'SETTINGS' | translate }}</h3>
+    <div class="search" (click)="logout()">
+        <img [src]="'../../../../assets/images/home/door.png'">
+    </div>
+</div>
+
+<div class="compartiment">
+    <p class="name">{{'GENERAL' | translate }}</p>
+    <div class="button-direction" routerLink="/language">
+        <h6>{{'LANGUAGE' | translate }}</h6>
+        <div class="lang">
+            <p>{{lang | translate}}</p>
+            <img src="../../../assets/images/home/arrow-right.png">
+        </div>
+    </div>
+    <div class="button-direction" routerLink="/profile">
+        <h6>{{'MYPROFILE' | translate }}</h6>
+        <img src="../../../assets/images/home/arrow-right.png">
+    </div>
+    <div class="button-direction">
+        <h6>{{'CONTACT' | translate }}</h6>
+        <img src="../../../assets/images/home/arrow-right.png">
+    </div>
+</div>
+<div class="compartiment">
+    <p class="name">{{'SECURITY' | translate }}</p>
+    <div class="button-direction" routerLink="/change-password">
+        <h6>{{'PASSWORD' | translate }}</h6>
+        <img src="../../../assets/images/home/arrow-right.png">
+    </div>
+    <div class="button-direction" routerLink="/conditions">
+        <h6>{{'PRIVACY' | translate }}</h6>
+        <img src="../../../assets/images/home/arrow-right.png">
+    </div>
+</div>
+<div>
+    <p class="choose">{{'CHOOSE' | translate }}</p>
+    <div class="button-direction2">
+        <h6>{{'BIOMETRIC' | translate }}</h6>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+</div>
+
+<div class="button-direction2">
+    <h6>{{'DARK-MODE' | translate }}</h6>
+    <label class="switch">
+        <input type="checkbox" (click)="changeMode()" [checked]="darkMode">
+        <span class="slider round"></span>
+    </label>
+</div>

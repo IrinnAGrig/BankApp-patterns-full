@@ -1,0 +1,13 @@
+<div class="title">
+    <app-go-back></app-go-back>
+    <h3>{{'SEARCH' | translate}}</h3>
+    <div class="clean" (click)="clearSearch()">
+        <img src="../../../assets/images/clean-search.png">
+    </div>
+</div>
+<div class="search">
+    <img src="../../../assets/images/icons/search-gray.png">
+    <input type="text" [placeholder]="'SEARCH' | translate" (input)="onSearch($event)" [(ngModel)]="search">
+    <img src="../../../assets/images/icons/clean-gray.png" (click)="clearSearch()">
+</div>
+<app-transaction [transactions]="transactions" [type]="'simple'"></app-transaction>

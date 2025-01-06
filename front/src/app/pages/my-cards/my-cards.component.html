@@ -1,0 +1,30 @@
+<app-mini-nav [title]="'MY-CARDS' | translate" [image]="'home/add-sign.png'" [action]="'/add-card'" [backAction]="'/home'"></app-mini-nav>
+<div class="cards-info" *ngIf="card">
+    <app-card-mastercard [card]="card"></app-card-mastercard>
+    <img class="elipse" src="../../../assets/images/home/elipse.png">
+    <div class="cards-get" (click)="goToAllCards()">
+        <p>{{'MY-CARDS' | translate}}</p>
+    </div>
+</div>
+<app-transaction [transactions]="transactions"></app-transaction>
+<h3> {{'LIMIT' | translate}}</h3>
+<div class="spending ">
+    <div class="save-limit">
+       <p>{{'AMOUNT1' | translate}}: ${{amount}}</p> 
+       <div class="buttons-actions" *ngIf="amount != initialAmount" >
+        <button class="btn btn-dark mr-2" (click)="cancelLimit()">{{'CANCEL' | translate}}</button>
+        <button class="btn btn-dark"  (click)="setLimit()">{{'SAVE' | translate}}</button>
+       </div>
+    </div>
+
+    <app-range-slider [(value)]="amount" [min]="1" [max]="5000"></app-range-slider>
+
+    <div style="display: flex;justify-content: space-between;">
+        <span>$0</span>
+        <span>$5,000</span>
+    </div>
+</div>
+
+
+  
+  

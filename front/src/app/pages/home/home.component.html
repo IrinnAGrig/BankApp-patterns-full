@@ -1,0 +1,55 @@
+<div class="title">
+    <div class="name">
+        <div class="image-profile">
+            <img *ngIf="userData.image == ''" src="../../../assets/images/no-profile-image.jpg" height="48" width="48">
+            <img *ngIf="userData.image != ''" [src]="userData.image">
+        </div>
+        <div>
+            <p>{{'WELCOME' | translate}}</p>
+            <h4>{{userData.name}}</h4>
+        </div>
+    </div>
+    <div class="search" (click)="goToSearch()">
+        <img src="../../../assets/images/icons/Search, Loupe.svg" >
+    </div>
+</div>
+<div class="cards-info" *ngIf="card">
+    <app-card-mastercard [card]="card" (click)="gotoCards()"></app-card-mastercard>
+    <img class="elipse" src="../../../assets/images/home/elipse.png">
+</div>
+<div class="cards-info" *ngIf="!card" style="margin: 50px;">
+    <h3>No cards yet.</h3>
+</div>
+
+<ul class="actions">
+    <li (click)="goToSendMoney()">
+        <div>
+            <img src="../../../assets/images/home/sign-up.png">
+        </div>
+        <p>{{'SEND' | translate}}</p>
+    </li>
+    <li (click)="goToRequestMoney()"> 
+        <div>
+            <img src="../../../assets/images/home/sign-up.png" style="transform: rotate(180deg);">
+        </div>
+        <p>{{'RECEIVE' | translate}}</p>
+    </li>
+    <li>
+        <div>
+            <img src="../../../assets/images/home/dolar.png">
+        </div>
+        <p>{{'LOAN' | translate}}</p>
+    </li>
+    <li>
+        <div>
+            <img src="../../../assets/images/home/topup.png">
+        </div>
+        <p>{{'TOPUP' | translate}}</p>
+    </li>
+</ul>
+<div class="list-transact">
+    <h4>{{'TRANSACTIONS' | translate}}</h4>
+    <p (click)="goToTransactions()">{{'SEEALL' | translate}}</p>
+
+</div>
+<app-transaction [transactions]="transactions" [type]="'advanced'"></app-transaction>

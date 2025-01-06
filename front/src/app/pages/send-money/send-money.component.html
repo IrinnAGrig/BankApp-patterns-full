@@ -1,0 +1,74 @@
+<app-mini-nav [title]="'SEND-MONEY' | translate" [image]="'no'" [action]="'no'" [backAction]="'/home'"></app-mini-nav>
+<div class="cards-info" *ngIf="!selectedCard">
+    <div class="slider-cards">
+        <div *ngFor="let card of cards" (click)="selectedCard = card" class="card-component" (click)="chooseCard(card)">
+            <app-card-mastercard [card]="card"></app-card-mastercard>
+        </div>
+    </div>
+    <img class="elipse" src="../../../assets/images/home/elipse.png">
+</div> 
+<div class="data-card" *ngIf="selectedCard">
+    <div (click)="deselectCard()" class="sign"><img src="../../../assets/images/home/arrow-right.png"></div>
+    <div class="card-selected">
+        <p>{{selectedCard.cardNumber | transformCardNumber}}</p>
+        <p>{{selectedCard.balance}} {{selectedCard.valute}}</p>
+    </div>
+</div>
+<div class="people-container " *ngIf="!selectedUser && !addNew">
+    <p style="margin-bottom: 0;">{{'SENDTO' | translate}}</p>
+    <div class="people" (click)="addNewUserTransfer()">
+        <div class="person">
+            <div class="image-person-add">
+                <img src="../../../assets/images/home/add-person.png">
+            </div>
+            <p>{{'ADD' | translate}}</p>
+        </div>
+        <div class="person" *ngFor="let user of recentUsers" (click)="selectedUser = user">
+            <div class="image-person">
+                <img [src]="user.image">
+            </div>
+            <p>{{user.name}}</p>
+        </div>
+    </div>
+</div>
+<div class="data-card" *ngIf="selectedUser && !addNew">
+    <div (click)="deselectUser()" class="sign"><img src="../../../assets/images/home/arrow-right.png"></div>
+    <div class="people-container-selected" >
+        <div class="image-person">
+            <img [src]="selectedUser.image">
+        </div>
+        <div>
+        <h5>{{selectedUser.name}}</h5>
+        <p>{{selectedUser.cardNumber | transformCardNumber}}</p>      
+        </div>
+    </div>
+</div>
+<div class="data-card" *ngIf="addNew">
+    <div (click)="deselectAddNewUser()" class="sign"><img src="../../../assets/images/home/arrow-right.png"></div>
+    <form [formGroup]="form">
+        <div class="group">
+            <label for="name">{{'FULLNAME' | translate}}</label>
+            <div class="input-group-data">
+                <input type="text" formControlName="name" id="name" [placeholder]="'FULLNAME-HOLDER' | translate">
+            </div>
+        </div> 
+        <div class="group">
+            <label for="cardNumber">{{'CARD-NUMBER' | translate}}</label>
+            <div class="input-group-data">
+                <input type="text" formControlName="cardNumber" id="cardNumber" [placeholder]="'CARD-NUMBER-HOLDER' | translate">
+            </div>
+        </div> 
+    </form>
+</div>
+
+<div class="price-container">
+    <div class="currency-amount">
+        <p>{{'AMOUNT' | translate}}</p> 
+        <span>{{'CURRENCY' | translate}}</span>    
+    </div>
+    <h4 class="amount"><span>USD</span><input type="number" [(ngModel)]="amount"  [placeholder]="'ENTER-AMOUNT' | translate"></h4>
+</div>
+
+<div class="fix-button">
+    <app-button-custom [text]="'SEND-MONEY' | translate" (click)="sendMoney()" ></app-button-custom>
+</div>

@@ -1,0 +1,10 @@
+pre{
+    margin-top: 30px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+    width: 100%; 
+    box-sizing: border-box;  
+    font-family: 'Poppins';
+    line-height: 24px;
+}

@@ -1,0 +1,76 @@
+<app-mini-nav [title]="'NOTIFICATIONS' | translate" [image]="'no'" [action]="'no'" [backAction]="'/statistics'"></app-mini-nav>
+
+<div class="navbar">
+  <button 
+    class="nav-button" 
+    [class.active]="selectedSection === 'transactions'"
+    (click)="selectSection('transactions')">
+    Transactions
+  </button>
+  <button 
+    class="nav-button" 
+    [class.active]="selectedSection === 'requests'"
+    (click)="selectSection('requests')">
+    Requests
+  </button>
+</div>
+<div *ngIf="selectedSection == 'transactions'">
+  <div class="requests-container" *ngIf="notifications.length > 0 ">
+    <ul class="requests-list">
+      <li *ngFor="let notification of notifications" class="request-item">
+        <div class="request-info">
+          <div class="request-details">
+            <div class="request-name">{{ notification.timestamp }}</div>
+            <div class="request-meta">
+              {{ notification.message }}
+            </div>
+            <div class="request-meta">
+              Available balance: {{ notification.availableBalance }}
+            </div>
+          </div>
+
+            <div [ngClass]="{'btn-notif-unseen': !notification.isRead }">
+            </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="notifications.length === 0">
+    No transactions found.
+  </div>
+</div>
+<div *ngIf="selectedSection == 'requests'">
+  <div class="requests-container" *ngIf="requests.length > 0 ">
+    <ul class="requests-list">
+      <li *ngFor="let request of requests" class="request-item">
+        <div class="request-info">
+          <div class="request-details">
+            <div class="request-name">{{ request.name }}</div>
+            <div class="request-meta">
+              <span class="request-amount">{{ request.amount | currency: request.valute }}</span>
+              <span class="request-date">{{'DUE' | translate}}: {{ request.dueDate | dateFormatter }}</span>
+            </div>
+          </div>
+          <div class="request-contact">
+            <div class="contact-phone">{{ request.phone }}</div>
+            <div class="contact-email">{{ request.email }}</div>
+          </div>
+          <div class="request-actions" *ngIf="!request.closed">
+            <button class="btn-accept" (click)="doAccept(request)">{{'ACCEPT' | translate}}</button>
+            <button class="btn-decline" (click)="doDecline(request)">{{'DECLINE' | translate}}</button>
+          </div>
+          <div class="request-actions" *ngIf="request.closed">
+            <button [ngClass]="{'btn-accept': request.status === 'A',
+                'btn-decline': request.status !== 'A'}">
+                {{( request.status == 'A' ? 'ACCEPTED'  : 'DECLINED') | translate}}</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="requests.length === 0">
+    No requests found.
+  </div>
+</div>
+
+  

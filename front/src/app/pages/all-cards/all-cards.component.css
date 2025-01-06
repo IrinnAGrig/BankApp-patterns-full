@@ -1,0 +1,29 @@
+button {
+    background-color: #0066FF;
+    width: 100%;
+    border: none;
+    height: 56px;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'Poppins';
+    position: absolute;
+}
+.fix-button {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    right: 40px;
+    padding: 0 20px; 
+}
+.cards-info {
+    position: relative;
+
+    img.elipse {
+        position: absolute;
+        top: 50px;
+        right: -20px;
+        z-index: 3;
+        pointer-events: none;
+    }
+}

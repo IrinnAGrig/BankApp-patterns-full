@@ -1,0 +1,45 @@
+<app-mini-nav [title]="'EDIT-PROFILE' | translate" [image]="'no'" [action]="'no'" [backAction]="'no'"></app-mini-nav>
+<div class="data-image">
+    <div class="image">
+        <img *ngIf="image == ''" src="../../../assets/images/no-profile-image.jpg">
+        <img *ngIf="image != ''" [src]="image" height="300">
+    </div>
+    <h3>{{userData.fullName}}</h3>
+    <div class="edit-image" (click)="triggerFileInput()">
+        <img src="../../../assets/images/profile/camera-icon.png" height="30" alt="Upload Icon">
+        <input type="file" id="file" (change)="convertToBase64($event)" accept="image/*" #fileInput>
+    </div>  
+</div>
+
+<form [formGroup]="editForm">
+    <div class="group">
+        <label for="name">{{'NAME' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../../assets/images/profile/User,Profile.png">
+            <input type="text" formControlName="name" id="name" placeholder="Enter Full Name">
+        </div>
+    </div>
+    <div class="group">
+        <label for="email">{{'EMAIL' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../assets/images/icons/email-mail-letter.png">
+            <input type="email" formControlName="email" id="email" placeholder="Enter Email">
+        </div>
+    </div>
+    <div class="group">
+        <label for="phone">{{'PHONE' | translate}}</label>
+        <div class="input-group-data">
+            <img src="../../assets/images/icons/Phone, Call.png">
+            <input type="text" formControlName="phone" id="phone" placeholder="Enter Phone">
+        </div>
+    </div>
+    <div class="group">
+        <label for="birth">{{'BIRTH' | translate}}</label>
+        <div class="input-group-data">
+            <input type="date" formControlName="birthDate" id="birth" placeholder="Enter Birth Date">
+        </div>
+    </div>
+</form>
+<div class="fix-button">
+    <app-button-custom [text]="'SAVE'| translate" (click)="saveData()"></app-button-custom>
+</div>

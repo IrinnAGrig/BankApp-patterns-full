@@ -1,0 +1,15 @@
+<app-mini-nav [title]="'LANGUAGE' | translate" [image]="'no'" [action]="'no'" [backAction]="'/settings'"></app-mini-nav>
+<div class="languages">
+    <div class="language" *ngFor="let language of languages;let index = index" (click)="selectLanguage(index)">
+        <div class="image-part">
+            <div class="image">
+                <img [src]="language.image">
+            </div>
+            <p>{{language.title | translate}}</p>     
+        </div>
+        <input type="checkbox" [checked]="language.selected" *ngIf="language.selected">
+    </div>
+</div>
+<div class="fix-button">
+    <app-button-custom [text]="'SAVELANG' | translate" (click)="saveLanguage()"></app-button-custom>
+</div>

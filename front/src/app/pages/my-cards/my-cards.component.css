@@ -1,0 +1,59 @@
+
+.cards-info {
+    position: relative;
+
+    img.elipse {
+        position: absolute;
+        top: 50px;
+        right: -20px;
+        z-index: 3;
+        pointer-events: none;
+    }
+}
+.cards-get{
+    background-color: #25253d;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    margin: 5px auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 335px;
+    p{
+        margin: 5px;
+    }
+}
+
+.spending {
+    background-color: var(--element-style-color);
+    border-radius: 20px;
+    padding: 15px;
+
+    p {
+        margin: 0;
+    }
+
+    .save-limit{
+        display: flex;
+        justify-content: space-between;
+        button{
+            padding: 0 5px;
+        }
+    }
+    input {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+}
+.buttons-actions{
+    display: flex;
+    button{
+       margin-left: 5px;  
+    }
+   
+}
