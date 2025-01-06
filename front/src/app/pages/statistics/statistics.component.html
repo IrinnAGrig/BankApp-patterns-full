@@ -1,0 +1,28 @@
+<div *ngIf="showChart">
+    <app-chart-pie (closed)="clodePieChart($event)" [transactions]="chartPieTransactions"></app-chart-pie>
+</div>
+
+<div style="position: relative;" [ngStyle]="{'filter': showChart ? 'blur(3px)' : 'none'}">
+    <div class="title" style="margin-bottom: 30px;">
+        <div class="back" (click)="goToLocation()" >
+            <img src="../../../../assets/images/back-sign.png">
+        </div>
+        <h3>{{'STATISTICS' | translate}}</h3>
+        <div class="search" [routerLink]="'/notifications'">
+            <img src="../../../../assets/images/home/Bell, Notification.png">
+            <div *ngIf="notifications != 0" class="notification">
+                <p>{{notifications}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="currency">
+        <p>{{'CURRENT-BALANCE' | translate}}</p>
+        <h3>${{balance | formatPrice}}</h3>
+    </div>
+    <app-line-chart [transactions]="chartTransactions" (month)="openPieChart($event)"></app-line-chart>
+    <div class="list-transact">
+        <h4>{{'TRANSACTIONS' | translate}}</h4>
+        <p (click)="goToTransactions()">{{'SEE-ALL' | translate}}</p>
+    </div>
+    <app-transaction [transactions]="transactions"></app-transaction>
+</div>

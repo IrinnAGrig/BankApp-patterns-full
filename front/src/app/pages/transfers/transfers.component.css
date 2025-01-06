@@ -1,0 +1,124 @@
+.compartiment p {
+    color: #A2A2A7;
+    font-size: 14px;
+    margin: 20px 0 0;
+}
+
+.info-details{
+    display: flex;
+}
+.button-get{
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    background-color: var(--backgrounf-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    float: right;
+}
+.button-direction {
+    border-bottom: 1px solid #F4F4F4;
+    padding: 10px 0;
+    margin-top: 7px;
+    position: relative;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+
+    h6 {
+        margin: 5px 0;
+        font-size: 14px;
+        color: var(--text-color);
+        font-weight: bold;
+    }
+    .info{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    .img-color{
+        filter: var(--image-fill);
+    }
+
+    .lang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            color: #A2A2A7;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+        img {
+            height: 24px;
+            width: 24px;
+        }
+        img.active{
+            transform: rotate(90deg);
+        }
+    }
+    p{
+        margin: 0;
+    }
+    span{
+        margin: 5px 0;
+    }
+    .amount-container{
+        height: 180px;
+ 
+        .price-container{
+            margin: 20px 0 10px;
+            border: 1px solid #E7EAEE;
+            border-radius: 15px;
+            padding: 10px;
+        
+            .currency-amount{
+                display: flex;
+                justify-content: space-between;
+                font-size: 11px;
+                p{
+                    color: #7E848D;
+                }
+                span{
+                    color: red;
+                }
+            }
+
+            .amount{
+                display: flex;
+                span{
+                    color: #9BB2D4;
+                    font-size: 24px;
+                    font-weight: bold; 
+                    margin-right: 10px;
+                }
+                input{
+                    width: 200px;
+                    border: none;
+                    box-shadow: none;
+                    background-color: inherit;
+                    color: inherit;
+                }
+            }
+            .limit-error{
+                color: red;
+            }
+        }
+    }
+}
+.card-select{
+    width: 100%;
+}
+.button-direction.active {
+    height: 260px;
+  }
+@keyframes dropdown {
+    from {height: 0;}
+    to {height: 80px;}
+  }
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+}

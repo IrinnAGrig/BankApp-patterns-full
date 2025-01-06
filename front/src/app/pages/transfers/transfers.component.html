@@ -1,0 +1,63 @@
+<app-mini-nav [title]="'TRANSFERS' | translate" [image]="'home/single-user-edit-pen.png'" [action]="'no'" [backAction]="'/home'"></app-mini-nav>
+<div class="compartiment">
+    <div class="button-direction">
+        <div class="info" (click)="appearTransferForm(!doTransfer)" >
+            <h6>{{'TRANSFER' | translate }}</h6>
+            <div class="lang">
+                <img src="../../../assets/images/home/arrow-right.png">
+            </div>
+        </div>
+        <div class="amount-container" *ngIf="doTransfer">
+            <p>{{'SOURCE' | translate}}</p>
+            <app-dropdown-card [cardList]="cards" [currentSelectedCard]="firstSelectedCard" (selectedCard)="changeCardsFirst($event)"></app-dropdown-card>
+            <p>{{'DESTINATION' | translate}}</p>
+            <app-dropdown-card [cardList]="cards" [currentSelectedCard]="secondSelectedCard" (selectedCard)="changeCardsSecond($event)"></app-dropdown-card>
+            <div class="price-container">
+                <div class="currency-amount">
+                    <h6>{{'AMOUNT' | translate }}</h6> 
+                    <span>{{'CURRENCY' | translate }}</span>    
+                </div>
+                <h4 class="amount">
+                    <span>USD</span>
+                    <input type="number" [(ngModel)]="amount"  [placeholder]="'AMOUNT' | translate ">
+                </h4>
+            </div>
+            <button class="button-get" [disabled]="!amount && amount <= 0" (click)="performTransferBetweenCards()">{{'Tranfer' | translate }}</button>
+        </div>
+    </div>
+</div>
+<div class="compartiment">
+    <p class="name">{{'SERVICES' | translate }}</p>
+    <div class="button-direction" *ngFor="let service of services" [ngClass]="{'active': service == selectedService}">
+        <div class="info" (click)="selectService(service)">
+            <div class="info-details">
+                <div class="image">
+                    <img [src]="service.emblem" height="16" width="16" [ngClass]="{'img-color': service.title == 'APPLE' || service.title == 'MONEYTRANSFER'}">
+                </div>
+                
+                <h6>{{service.title | translate }}</h6>
+            </div>
+            
+            <div class="lang">
+                <img src="../../../assets/images/home/arrow-right.png" [ngClass]="{'active': service == selectedService}">
+            </div>
+        </div>
+
+        <div class="amount-container" *ngIf="service == selectedService">
+            <app-dropdown-card [cardList]="cards" [currentSelectedCard]="firstSelectedCard" (selectedCard)="changeCardsFirst($event)"></app-dropdown-card>
+            <div class="price-container">
+                <div class="currency-amount">
+                    <h6>{{'AMOUNT' | translate }}</h6> 
+                    <span>{{'CURRENCY' | translate }}</span>    
+                </div>
+                <h4 class="amount">
+                    <span>USD</span>
+                    <input type="number" [(ngModel)]="amount"  [placeholder]="'AMOUNT' | translate ">
+                </h4>
+
+            </div>
+            <span class="limit-error" *ngIf="errorLimit">{{'ERRORLIMIT'}}</span>
+            <button class="button-get" [disabled]="!amount && amount <= 0" (click)="saveTransaction()">{{'GET-SERVICE' | translate }}</button>
+        </div>
+    </div>
+</div>

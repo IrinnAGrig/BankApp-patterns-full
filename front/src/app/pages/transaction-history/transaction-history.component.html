@@ -1,0 +1,8 @@
+<div class="title">
+    <app-go-back></app-go-back>
+    <h3>{{'HISTORY' | translate}}</h3>
+    <div class="search">
+        <img src="../../../assets/images/transactions/oclock.png">
+    </div>
+</div>
+<app-transaction [transactions]="transactions" [type]="'months'"></app-transaction>

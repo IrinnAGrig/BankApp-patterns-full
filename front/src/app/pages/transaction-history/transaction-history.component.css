@@ -1,0 +1,43 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .search {
+        background-color: var(--element-style-color);
+        height: 42px;
+        width: 42px;
+        text-align: center;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            filter: var(--image-fill);
+        }
+    }
+    h3{
+        margin: 0;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+}
+
+.list-transact {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        color: #0066FF;
+        font-size: 14px;
+        margin: 0;
+        font-weight: bold;
+    }
+}
