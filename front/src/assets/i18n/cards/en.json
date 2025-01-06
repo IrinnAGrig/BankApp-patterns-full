@@ -1,0 +1,19 @@
+{
+  "MY-CARDS": "My Cards",
+  "LIMIT": "Monthly spending limit",
+  "AMOUNT1" : "Amount",
+  "ADD-CARD": "Add Card",
+  "ADD-NEW-CARD": "Add New Card",
+  "CARDHOLDER-NAME": "CardHolder Name",
+  "ENTER-NAME-HOLDER": "Enter Full Name",
+  "DATE": "Epiry Date",
+  "DATE-HOLDER": "dd/mm/yyyy",
+  "CARD": "Card Number",
+  "ENTER-CARD": "Enter Card Number",
+  "ADD": "Add",
+  "CVV": "4-digit CVV",
+  "ENTER-CVV": "Enter CVV",
+  "CANCEL": "Cancel",
+  "SAVE": "Save",
+  "ALL-CARDS": "All Cards"
+}

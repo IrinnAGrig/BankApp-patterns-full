@@ -1,0 +1,19 @@
+{
+  "MY-CARDS": "Le Mie Carte",
+  "LIMIT": "Limite di spesa mensile",
+  "AMOUNT1" : "Importo",
+  "ADD-CARD": "Aggiungi Carta",
+  "ADD-NEW-CARD": "Aggiungi Nuova Carta",
+  "CARDHOLDER-NAME": "Nome del Titolare",
+  "ENTER-NAME-HOLDER": "Inserisci Nome Completo",
+  "DATE": "Data di Scadenza",
+  "DATE-HOLDER": "gg/mm/aaaa",
+  "CARD": "Numero della Carta",
+  "ENTER-CARD": "Inserisci Numero della Carta",
+  "ADD": "Aggiungi",
+  "CVV": "CVV a 4 cifre",
+  "ENTER-CVV": "Inserisci CVV",
+  "CANCEL": "Annulla",
+  "SAVE": "Salva",
+  "ALL-CARDS": "Tutte le Carte"
+}

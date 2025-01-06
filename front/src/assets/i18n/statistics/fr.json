@@ -1,0 +1,33 @@
+{
+  "CURRENT-BALANCE": "Solde Actuel",
+  "TRANSACTIONS": "Transactions",
+  "SEE-ALL": "Voir Tout",
+  "NOTIFICATIONS": "Notifications",
+  "ACCEPT": "Accepter",
+  "ACCEPTED": "Accepté",
+  "DECLINE": "Refuser",
+  "DECLINED": "Refusé",
+  "DUE": "Échéance",
+  "PIE-CHART": "Diagramme Circulaire - total",
+  "SERVICES": "Services",
+  "SHOPPING": "Shopping",
+  "ENTERTAIMENT": "Divertissement",
+  "COMUNAL": "Services Communs",
+  "TRANSACTION": "Transaction",
+  "TRAVEL": "Voyage",
+  "CAR": "Voiture",
+  "MONTHS": {
+    "Jan": "Jan",
+    "Feb": "Fév",
+    "Mar": "Mar",
+    "Apr": "Avr",
+    "May": "Mai",
+    "Jun": "Juin",
+    "Jul": "Juil",
+    "Aug": "Août",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Déc"
+  }
+}

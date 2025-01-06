@@ -1,0 +1,19 @@
+{
+  "MY-CARDS": "Cardurile Mele",
+  "LIMIT": "Limită de cheltuieli lunară",
+  "AMOUNT1" : "Sumă",
+  "ADD-CARD": "Adaugă Card",
+  "ADD-NEW-CARD": "Adaugă Card Nou",
+  "CARDHOLDER-NAME": "Numele Deținătorului",
+  "ENTER-NAME-HOLDER": "Introduceți Numele Complet",
+  "DATE": "Data de Expirare",
+  "DATE-HOLDER": "zz/ll/aaaa",
+  "CARD": "Numărul Cardului",
+  "ENTER-CARD": "Introduceți Numărul Cardului",
+  "ADD": "Adaugă",
+  "CVV": "CVV de 4 cifre",
+  "ENTER-CVV": "Introduceți CVV",
+  "CANCEL": "Anulează",
+  "SAVE": "Salvează",
+  "ALL-CARDS": "Toate Cardurile"
+}

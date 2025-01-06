@@ -1,0 +1,33 @@
+{
+  "CURRENT-BALANCE": "Current Balance",
+  "TRANSACTIONS": "Transactions",
+  "SEE-ALL": "See All",
+  "NOTIFICATIONS": "Notifications",
+  "ACCEPT": " Accept",
+  "ACCEPTED": "Accepted",
+  "DECLINE": "Decline",
+  "DECLINED": "Declined",
+  "DUE": "Due",
+  "PIE-CHART": "Pie Chart - total",
+  "SERVICES": "Services",
+  "SHOPPING" : "Shopping",
+  "ENTERTAIMENT" : "Entertaiment",
+  "COMUNAL": "Comunal services",
+  "TRANSACTION": "Transaction",
+  "TRAVEL": "Travel",
+  "CAR": "Car",
+  "MONTHS": {
+    "Jan": "Jan",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",
+    "May": "May",
+    "Jun": "Jun",
+    "Jul": "Jul",
+    "Aug": "Aug",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Dec"
+  }
+}

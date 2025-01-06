@@ -1,0 +1,33 @@
+{
+  "CURRENT-BALANCE": "Sold Curent",
+  "TRANSACTIONS": "Tranzacții",
+  "SEE-ALL": "Vezi Tot",
+  "NOTIFICATIONS": "Notificări",
+  "ACCEPT": "Acceptă",
+  "ACCEPTED": "Acceptat",
+  "DECLINE": "Refuză",
+  "DECLINED": "Refuzat",
+  "DUE": "Pana la",
+  "PIE-CHART": "Diagramă Circulară - total",
+  "SERVICES": "Servicii",
+  "SHOPPING": "Shopping",
+  "ENTERTAIMENT": "Divertisment",
+  "COMUNAL": "Servicii Comunale",
+  "TRANSACTION": "Tranzacție",
+  "TRAVEL": "Călătorie",
+  "CAR": "Mașină",
+  "MONTHS": {
+    "Jan": "Ian",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",
+    "May": "Mai",
+    "Jun": "Iun",
+    "Jul": "Iul",
+    "Aug": "Aug",
+    "Sep": "Sep",
+    "Oct": "Oct",
+    "Nov": "Nov",
+    "Dec": "Dec"
+  }
+}

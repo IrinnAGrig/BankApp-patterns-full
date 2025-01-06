@@ -1,0 +1,33 @@
+{
+  "CURRENT-BALANCE": "Saldo Attuale",
+  "TRANSACTIONS": "Transazioni",
+  "SEE-ALL": "Vedi Tutto",
+  "NOTIFICATIONS": "Notifiche",
+  "ACCEPT": "Accetta",
+  "ACCEPTED": "Accettato",
+  "DECLINE": "Rifiuta",
+  "DECLINED": "Rifiutato",
+  "DUE": "Scadenza",
+  "PIE-CHART": "Grafico a Torta - totale",
+  "SERVICES": "Servizi",
+  "SHOPPING": "Shopping",
+  "ENTERTAIMENT": "Intrattenimento",
+  "COMUNAL": "Servizi Comunali",
+  "TRANSACTION": "Transazione",
+  "TRAVEL": "Viaggio",
+  "CAR": "Auto",
+  "MONTHS": {
+    "Jan": "Gen",
+    "Feb": "Feb",
+    "Mar": "Mar",
+    "Apr": "Apr",
+    "May": "Mag",
+    "Jun": "Giu",
+    "Jul": "Lug",
+    "Aug": "Ago",
+    "Sep": "Set",
+    "Oct": "Ott",
+    "Nov": "Nov",
+    "Dec": "Dic"
+  }
+}
