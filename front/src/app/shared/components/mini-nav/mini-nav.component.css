@@ -1,0 +1,38 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search {
+        background-color: var(--element-style-color);
+        height: 42px;
+        width: 42px;
+        text-align: center;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            filter: var(--image-fill);
+        }
+    }
+    h3{
+        margin: 0;
+        font-size: 18px;
+        font-weight: bolder;
+    }
+}
+.back {
+    background-color: var(--element-style-color);
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img{
+        filter: var(--image-fill);
+    }
+}

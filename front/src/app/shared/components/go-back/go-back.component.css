@@ -1,0 +1,14 @@
+.back {
+    background-color: var(--element-style-color);
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img{
+        filter: var(--image-fill);
+    }
+}

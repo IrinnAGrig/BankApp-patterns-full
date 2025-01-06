@@ -1,0 +1,10 @@
+<div style="display: block;">
+  <canvas id="myChart"></canvas>
+  <div class="buttons">
+    <div *ngFor="let label of labels; let i = index">
+      <button [id]="'btn-' + i" (click)="highlightButton(i)">
+        {{ label | translate}}
+      </button>
+    </div>     
+  </div>
+</div>

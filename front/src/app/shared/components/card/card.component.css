@@ -1,0 +1,146 @@
+.card {
+    background-color: #25253d;
+    border-radius: 25px;
+    height: 200px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 335px;
+
+    .word-img{
+        position: relative;
+        z-index: -1;
+    }
+
+    .data {
+        top: 0;
+        position: absolute;
+        width: 90%;
+        margin: 0 20px;
+
+        p {
+            margin: 0;
+            color: white;
+        }
+
+        .name {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .title {
+            font-size: 9px;
+            color: #A2A2A7;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info {
+            display: flex;
+            margin-top: 15px;
+
+            & div:first-child {
+                margin-right: 10px;
+            }
+        }
+
+        td {
+            padding: 0;
+        }
+
+        pre {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+            font-weight: lighter;
+            font-family: 'Poppins';
+        }
+
+        .emblem {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            width: 100%;
+
+            img.semnal {
+                opacity: 0.2;
+                height: 21;
+                margin-right: 5px;
+            }
+        }
+
+    }
+
+
+}
+.card-visa {
+    background-color: #25253d;
+    border-radius: 25px;
+    height: 200px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    max-width: 335px;
+
+
+    .data {
+        top: 0;
+        position: absolute;
+        width: 90%;
+        margin: 0 20px;
+
+        p {
+            margin: 0;
+            color: white;
+        }
+
+        .name {
+            font-size: 13px;
+            margin-top: 10px;
+        }
+
+        .title {
+            font-size: 9px;
+            color: #A2A2A7;
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info {
+            display: flex;
+            margin-top: 15px;
+
+            & div:first-child {
+                margin-right: 10px;
+            }
+        }
+
+        td {
+            padding: 0;
+        }
+
+        pre {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+            font-weight: lighter;
+            font-family: 'Poppins';
+        }
+
+        .emblem {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+    }
+
+
+}

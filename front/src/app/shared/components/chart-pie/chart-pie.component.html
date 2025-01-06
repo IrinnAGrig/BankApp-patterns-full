@@ -1,0 +1,56 @@
+<div class="screen" [style.height.px]="screenHeight" 
+    [style.width.px]="screenWidth" 
+    (touchstart)="onTouchStart($event)"
+    (touchmove)="onTouchMove($event)"
+    (touchend)="onTouchEnd($event)" 
+    [ngClass]="{ 'get-clearer': isClosing}">
+    
+    <div class="element" [ngClass]="{'extended': notOpen, 'no-extended': !notOpen , 'is-closing': isClosing}">
+        <div class="show-mini-container"></div>
+        <h3>{{'PIE-CHART' | translate}}({{total | formatPrice}} $)</h3>
+        <div class="chart-container">
+            <div class="center-chart">
+                <h3>{{selectedElement.value}}%</h3>
+                <p>{{selectedElement.label | translate}}</p>
+            </div>
+            <canvas id="MyChart">{{ chart }}</canvas>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <div style="background: rgb(255,148,109); background: linear-gradient(90deg, rgba(255,148,109,1) 0%, rgba(255,189,101,1) 100%);"></div>
+                </td>
+                <td><p>{{'ENTERTAIMENT' | translate}}</p></td>
+                <td>
+                    <div style="background: rgb(189,253,200); background: linear-gradient(90deg, rgba(189,253,200,1) 0%, rgba(100,229,195,1) 100%);"></div>
+                </td>
+                <td><p>{{'TRANSACTION' | translate}}</p></td>
+                <td>
+                    <div style="background: rgb(8,230,248); background: linear-gradient(90deg, rgba(8,230,248,1) 0%, rgba(71,190,250,1) 100%);"></div>
+                </td>
+                <td><p>{{'TRAVEL' | translate}}</p></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="background: rgb(245,114,163); background: linear-gradient(90deg, rgba(245,114,163,1) 0%, rgba(213,162,233,1) 100%);"></div>
+                </td>
+                <td><p>{{'SERVICES' | translate}}</p></td>
+                <td>
+                    <div style="background: rgb(246,166,166); background: linear-gradient(90deg, rgba(246,166,166,1) 0%, rgba(255,0,0,1) 100%);"></div>
+                </td>
+                <td><p>{{'SHOPPING' | translate}}</p></td>
+                <td>
+                    <div style="background: rgb(234,246,163); background: linear-gradient(90deg, rgba(234,246,163,1) 0%, rgba(236,255,0,1) 100%);"></div>
+                </td>
+                <td><p>{{'CAR' | translate}}</p></td>
+            </tr>
+        </table>
+        <div class="list-transact">
+            <h4>{{'TRANSACTIONS' | translate}}</h4>
+        </div>
+        <div class="transactions" 
+            [style.height.px]="screenHeight - 400">
+            <app-transaction [transactions]="transactions"></app-transaction>   
+        </div>
+    </div>
+</div>

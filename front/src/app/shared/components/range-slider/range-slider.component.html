@@ -1,0 +1,11 @@
+<div class="slider-container">
+  <div class="slider" (mousedown)="startDrag($event)">
+    <div class="slider-fill" 
+    [ngStyle]="{'width': fillWidth + '%' }"></div>
+          <div class="slider-thumb"
+    id="slider-thumb" (touchstart)="startDrag($event)"
+          [ngStyle]="{'left': thumbPosition + '%' }"
+          (mousedown)="startDrag($event)"></div>
+  </div>
+</div>
+  

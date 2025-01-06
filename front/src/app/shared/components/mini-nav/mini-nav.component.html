@@ -1,0 +1,12 @@
+<div class="title" style="margin-bottom: 30px;">
+    <div *ngIf="backAction && backAction != 'no'" class="back" (click)="goToLocation()" >
+        <img src="../../../../assets/images/back-sign.png">
+    </div>
+    <app-go-back *ngIf="backAction == 'no'"></app-go-back>
+    <h3>{{title}}</h3>
+    <div *ngIf="action != 'no'" class="search" [routerLink]="action">
+        <img [src]="'../../../../assets/images/' + image">
+    </div>
+    <div *ngIf="action == 'no'" style="width: 42px;"></div>
+</div>
+

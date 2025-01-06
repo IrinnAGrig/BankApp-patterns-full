@@ -1,0 +1,27 @@
+<div class="dropdown" (click)="toggleDropdown()">
+    <div *ngIf="currentSelectedCard" class="card-element" [ngClass]="{'active': isOpen}">
+        <div class="image">
+            <img  *ngIf="currentSelectedCard.type == 'mastercard'" src="../../../../assets/images/mastercard.png">
+            <img  *ngIf="currentSelectedCard.type == 'visa'"  style="background-color: #1E1E1E;" height="15" src="../../../../assets/images/visa-logo.png">
+        </div>
+        <div class="text-card">
+            <p>{{currentSelectedCard.type == 'visa' ? 'Visa' : 'MasterCard'}} *{{modifyCard(currentSelectedCard.cardNumber)}}</p>
+            <p>{{currentSelectedCard.balance}} {{currentSelectedCard.valute}}</p>
+        </div>  
+       <div class="sign-element">
+            <img src="../../../assets/images/home/arrow-right.png">
+       </div>
+    </div>
+    <div class="dropdown-content" *ngIf="isOpen">
+        <div *ngFor="let card of shownCards" class="card-element" (click)="selectCard(card)">
+            <div class="image">
+                <img  *ngIf="card.type == 'mastercard'" src="../../../../assets/images/mastercard.png">
+                <img  *ngIf="card.type == 'visa'"  style="background-color: #1E1E1E;" height="15" src="../../../../assets/images/visa-logo.png">
+            </div>
+            <div class="text-card">
+                <p>{{card.type == 'visa' ? 'Visa' : 'MasterCard'}} *{{modifyCard(card.cardNumber)}}</p>
+                <p>{{card.balance}} {{card.valute}}</p>
+            </div>
+        </div>
+    </div>
+</div>

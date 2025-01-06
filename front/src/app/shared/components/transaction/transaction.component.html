@@ -1,0 +1,53 @@
+<div *ngIf="(type === 'advanced' || type === 'months') && filteredTransactions.length > 0">
+    <ng-container *ngFor="let group of filteredTransactions">
+        <h3 *ngIf="group.transactions.length > 0">{{ group.label | translate}} 
+            <span *ngIf="group.year != 0">{{group.year}}</span>
+        </h3>
+        <ul class="transaction">
+            <li *ngFor="let transaction of group.transactions">
+                <div class="transaction-info">
+                    <div class="image">
+                        <img height="20" 
+                             [src]="transaction.type == 'Buy' ? transaction.emblem : './assets/images/transactions/money-transfer.png'" 
+                             [alt]="transaction.title"
+                             [ngClass]="{'img-color': transaction.title == 'APPLE' || transaction.title == 'MONEYTRANSFER'}">
+                    </div>
+                    <div class="titles">
+                        <div class="title">{{ transaction.title | translate}}</div>
+                        <div class="subtitle">{{ transaction.subtitle | translate}}</div>
+                    </div>
+                </div>
+                <div class="transaction-sum" [ngClass]="{'positive': transaction.sum > 0}">
+                    <h6>{{transaction.sum | formatPrice}} {{ transaction.valute}}</h6>
+                    <div class="date">{{ transaction.date | dateFormatter }}</div>
+                </div>
+            </li>
+        </ul>
+    </ng-container>
+</div>
+
+<div *ngIf="type === 'simple' && transactions.length > 0">
+    <ul class="transaction">
+        <li *ngFor="let transaction of transactions">
+            <div class="transaction-info">
+                <div class="image">
+                    <img height="20" 
+                         [src]="transaction.type == 'Buy' ? transaction.emblem : './assets/images/transactions/money-transfer.png'" 
+                         [alt]="transaction.title"
+                         [ngClass]="{'img-color': transaction.title == 'APPLE' || transaction.title == 'MONEYTRANSFER'}">
+                </div>
+                <div class="titles">
+                    <div class="title">{{ transaction.title | translate}}</div>
+                    <div class="subtitle">{{ transaction.subtitle | translate}}</div>
+                </div>
+            </div>
+            <div class="transaction-sum" [ngClass]="{'positive': transaction.sum > 0}">
+                <h6>{{transaction.sum | formatPrice}} {{ transaction.valute}}</h6>
+                <div class="date">{{ transaction.date | date }}</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<ul class="transaction" *ngIf="transactions.length == 0">
+   <p>{{'NO-TRANSACTIONS' | translate}}</p>
+</ul>

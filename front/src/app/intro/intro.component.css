@@ -1,0 +1,79 @@
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+
+    h2 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 35px;
+    }
+}
+
+.steps {
+    .steper {
+        display: flex;
+        align-items: center;
+        width: 40px;
+        height: 20px;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+        text-align: center;
+        margin: 40px auto 30px;
+
+
+        .dot {
+            width: 5px;
+            height: 5px;
+            margin: 2.5px;
+            border-radius: 50%;
+            background-color: #0066FF;
+            transform: scale(1);
+            opacity: 0.2;
+            border-radius: 4px;
+            transition: transform 0.3s ease, width 0.3s ease, opacity 0.3s ease;
+        }
+
+        .dot.active {
+            width: 15px;
+            opacity: 1;
+        }
+    }
+
+    .text {
+        margin: 20px;
+
+        h3 {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 14px;
+            color: #7E848D;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

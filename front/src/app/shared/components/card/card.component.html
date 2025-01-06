@@ -1,0 +1,35 @@
+<div class="card" *ngIf="card">
+    <img src="../../../../assets/images/icons/word-map.svg" [ngClass]="{'word-img': card.type == 'visa'}" >
+    <div class="data">
+        <div class="emblem " *ngIf="card.type == 'mastercard'">
+            <img src="../../../../assets/images/icons/qr-card.png">
+            <img class="semnal" src="../../../../assets/images/icons/semnal.png">
+        </div>
+        <div class="emblem" *ngIf="card.type == 'visa'">
+            <img src="../../../../assets/images/Chip.png">
+        </div>
+        <div class="emblem" style="margin: 12.5px" *ngIf="card.type == 'none'"></div>
+        <pre>{{card.cardNumber == '' ? 'xxxx xxxx xxxx xxxx' : card.cardNumber | transformCardNumber}}</pre>
+        <p class="name">{{card.balance | formatPrice}} {{card.valute}}</p>
+        <div class="details">
+            <div class="info">
+                <div>
+                    <p class="title">Expiry Date</p>
+                    <p>{{card.expiryDate == '' ? 'dd/mm/yyyy' : card.expiryDate}}</p>
+                </div>
+                <div *ngIf="card.type == 'mastercard'">
+                    <p class="title">CVV</p>
+                    <p>{{card.cvv ? 'xxxx' : card.cvv}}</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4px;" *ngIf="card.type == 'mastercard'">
+                <img src="../.././../../assets/images/mastercard.png">
+                <p>Mastercard</p>
+            </div>
+            <div style=" margin-top: 30px;margin-right: 7px;" *ngIf="card.type == 'visa'">
+                <img src="../.././../../assets/images/visa-logo.png">
+            </div>
+        </div>
+    </div>
+</div>

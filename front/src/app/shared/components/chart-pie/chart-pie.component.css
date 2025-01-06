@@ -1,0 +1,138 @@
+.screen{
+    position: absolute;
+    width: 100%;
+    margin: -20px; 
+    background-color: rgba(120, 120, 120,0.5); 
+    z-index: 3;
+    overflow: hidden;
+    transition: transform 1s ease;
+    .element{
+        background-color: var(--background-color);
+    }
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 700px;
+    height: auto !important;
+  }
+
+.list-transact {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        color: #0066FF;
+        font-size: 14px;
+        margin: 0;
+        font-weight: bold;
+    }
+}
+.legend{
+    column-count: 3;
+
+    .legend-element{
+        display: flex;
+        align-items: center;
+
+        div{
+            width: 14px !important;
+            height: 14px;
+            background-color: black;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        p{
+            font-size: 13px;
+            margin: 5px;
+        }
+    }
+}
+table{
+    margin-top: 10px;
+    width: 100%;
+    div{
+        width: 14px !important;
+        height: 14px;
+        background-color: black;
+        border-radius: 5px;
+        margin: 5px 0 5px 5px;
+    }
+    p{
+        font-size: 13px;
+        margin: 5px;
+    }
+}
+
+.no-extended {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 85%; 
+  }
+  
+  .extended {
+    height: 100%; 
+    transform: translateY(0); 
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
+  }
+
+  .is-closing{
+    height: 0%; 
+  }
+  .get-clearer{
+    background-color: none; 
+  }
+
+.element{
+    transition: height 1s ease;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding: 5px 20px;
+   
+    h3{
+          font-size: 18px; 
+    }
+    .show-mini-container{
+        margin: 10px auto;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        background-color: #E7EAEE;
+        width: 42PX;
+        height: 5px;
+        border-radius: 5px;
+    }
+}
+.chart-container{
+    margin: 20px 0;
+    position: relative;
+}
+.center-chart{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 14%;
+    pointer-events: none;
+    h3{
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    p{
+        margin: 0;
+        font-size: 12px;
+    }
+}
+.transactions{
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+    z-index: 20;
+}

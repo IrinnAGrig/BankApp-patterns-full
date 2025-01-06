@@ -1,0 +1,17 @@
+canvas {
+    width: 100% !important;
+    max-width: 600px;
+    height: auto !important;
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    button{
+      border: none;
+      margin: 7px 0;
+      background-color: inherit;
+      color: gray;
+      font-size: 12px;
+      border-radius: 5px;
+    }
+  }
